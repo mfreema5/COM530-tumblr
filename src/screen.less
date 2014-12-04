@@ -1,0 +1,92 @@
+/*****  screen.css: Screen Styles  *****/
+
+@import (reference) "colors.less";
+
+@default-font-stack: Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+html {
+  box-sizing: border-box;
+  background-color: @greenly-5;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/*   Typography, color, etc.   */
+/*   Layout is farther down.   */
+/*******************************/
+/* Basic element hierarchy:    */
+/* <header>                    */
+/* <body>                      */
+/*   <main> <h1>               */
+/*     <article> <h2>          */
+/*   <nav>                     */
+/*   <footer>                  */
+/*******************************/
+
+body {
+  font-family: @default-font-stack;
+}
+
+h1 {
+  font-size:     1.375em;
+  line-height:   1.500em;  /* font + 0.125em */
+}
+
+h2 {
+  font-size:     1.250em;
+  line-height:   1.375em;
+}
+
+h1,h2,h3,h4,h5,h6,b,strong { font-weight: bold; }
+
+i,em { font-style: italic; }
+
+
+/* Layout *************************************/
+/* “CSS doesn't define where to place things; */
+/* it defines HOW to place them.              */
+/* Like the Tao, it does nothing,             */
+/* but through it, all things get done.” - me */
+/**/
+
+/*[ Default; no media query ]*********************/
+/* Targets a [12.5 em < screen < 37.5 em] screen */
+
+
+/*********************************************[ screen < 12.5 em ]*/
+/* This is a weirdly small size of viewport, _not_ the default!   */
+/* This uses ‘em’ instead of ‘%’ to enforce minimums for spacings */
+
+@media all and ( min-width: 0 ) {
+}
+
+/******************************************[ 12.5 em < screen < 37.5 em ]*/
+/* Switch from ‘em’ to ‘%’ to allow dynamic/responsive sizing of spaces. */
+
+@media all and ( min-width: 12.5em ) {
+}
+
+/**********************************[ 37.5 em < screen < 45.25 em ]*/
+/* Limit width of <article>, to limit the length of lines of text */
+/* 37.5 display-em -> 56.25 print-em                              */
+/* Print-em better estimates the number of characters on a line   */
+
+@media all and ( min-width: 37.5em ) {
+}
+
+/**********************************[ 45.25 em < screen < 60 em ]*/
+
+ @media all and ( min-width: 45.25em ) {
+}
+
+/**********************************[ 60 em < screen ]*/
+
+ @media all and ( min-width: 60em ) {
+}
+
+/*[MJF - Fall 2014]************************************/
+
+
+
