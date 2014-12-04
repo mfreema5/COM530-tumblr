@@ -1,0 +1,38 @@
+!!!
+%html{:lang => "en"}
+  %head
+    %title Practically an impact
+    %meta{:charset => "utf-8"}/
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+    %link{:href => "css/reset.css", :media => "screen,print", :rel => "stylesheet"}/
+    %link{:href => "css/screen.css", :rel => "stylesheet"}/
+  %body
+    %main
+      %h1
+        Practically an impact
+      %article#text
+        %h2
+          Posted
+        {block:Text}
+        {/block:Text}
+      %article#quote
+        %h2
+          Read
+        {block:Quote}
+        {/block:Quote}
+      %article#photo
+        %h2
+          Framed
+        {block:Photo}
+        {/block:Photo}
+      %article#link
+        %h2
+          Linked
+        {block:Link}
+        {/block:Link}
+    %nav
+    %footer
+
+
+
+
