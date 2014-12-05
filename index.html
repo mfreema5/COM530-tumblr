@@ -1,0 +1,85 @@
+<html lang="en">
+  <head>
+    <title>Practically an impact</title>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link href="css/reset.css" media="screen,print" rel="stylesheet">
+    <link href="css/screen.css" rel="stylesheet">
+  </head>
+  <body>
+    <main>
+      <h1>
+        Practically an impact
+      </h1>
+      <article id="text">
+        <div class="label">
+          <h2>
+            Posted
+          </h2>
+        </div>
+        {block:Text}
+        <section>
+          {block:Title}
+          <h3>
+            {Title}
+          </h3>
+          {/block:Title}
+          {Body}
+        </section>
+        {/block:Text}
+      </article>
+      <article id="quote">
+        <div class="label">
+          <h2>
+            Read
+          </h2>
+        </div>
+        {block:Quote}
+        <section>
+          <blockquote>
+            {Quote}
+          </blockquote>
+          {block:Source}
+          <div class="source">
+            {Source}
+          </div>
+          {/block:Source}
+        </section>
+        {/block:Quote}
+      </article>
+      <article id="photo">
+        <h2>
+          Framed
+        </h2>
+        {block:Photo}
+        {/block:Photo}
+      </article>
+      <article id="link">
+        <h2>
+          Linked
+        </h2>
+        {block:Link}
+        <section>
+          <div class="link"></div>
+          <a href="{URL}">{Name}</a>
+          {block:Thumbnail}
+          <a href="{URL}">{Thumbnail}</a>
+          {block:Host}
+          <div class="caption">
+            via {Host}
+          </div>
+          {/block:Host}
+          {/block:Thumbnail}
+          {block:Description}
+          <div class="describe">
+            {Description}
+          </div>
+          {/block:Description}
+        </section>
+        {/block:Link}
+      </article>
+    </main>
+    <nav></nav>
+    <footer></footer>
+  </body>
+</html>
