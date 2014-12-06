@@ -20,17 +20,17 @@
         </div>
         {block:Text}
         <section>
-          <div id="bar">
+          <div class="bar">
             &nbsp;
-            {block:Title}
-            <h3>
-              {Title}
-            </h3>
-            {/block:Title}
-            {Body}
           </div>
-          {/block:Text}
+          {block:Title}
+          <h3>
+            {Title}
+          </h3>
+          {/block:Title}
+          {Body}
         </section>
+        {/block:Text}
       </article>
       <article id="photo">
         <div class="label">
@@ -39,13 +39,13 @@
             Framed
           </h2>
         </div>
+        {block:Photo}
         <section>
-          <div id="bar">
+          <div class="bar">
             &nbsp;
-            {block:Photo}
-            {/block:Photo}
           </div>
         </section>
+        {/block:Photo}
       </article>
       <article id="quote">
         <div class="label">
@@ -56,19 +56,19 @@
         </div>
         {block:Quote}
         <section>
-          <div id="bar">
+          <div class="bar">
             &nbsp;
-            <blockquote>
-              {Quote}
-            </blockquote>
-            {block:Source}
-            <div class="source">
-              {Source}
-            </div>
-            {/block:Source}
           </div>
-          {/block:Quote}
+          <blockquote>
+            {Quote}
+          </blockquote>
+          {block:Source}
+          <div class="source">
+            {Source}
+          </div>
+          {/block:Source}
         </section>
+        {/block:Quote}
       </article>
       <article id="link">
         <div class="label">
@@ -79,26 +79,26 @@
         </div>
         {block:Link}
         <section>
-          <div id="bar">
+          <div class="bar">
             &nbsp;
-            <div class="link"></div>
-            <a href="{URL}">{Name}</a>
-            {block:Thumbnail}
-            <a href="{URL}">{Thumbnail}</a>
-            {block:Host}
-            <div class="caption">
-              via {Host}
-            </div>
-            {/block:Host}
-            {/block:Thumbnail}
-            {block:Description}
-            <div class="describe">
-              {Description}
-            </div>
-            {/block:Description}
           </div>
-          {/block:Link}
+          <div class="link"></div>
+          <a href="{URL}">{Name}</a>
+          {block:Thumbnail}
+          <a href="{URL}">{Thumbnail}</a>
+          {block:Host}
+          <div class="caption">
+            via {Host}
+          </div>
+          {/block:Host}
+          {/block:Thumbnail}
+          {block:Description}
+          <div class="describe">
+            {Description}
+          </div>
+          {/block:Description}
         </section>
+        {/block:Link}
       </article>
     </main>
     <nav></nav>
