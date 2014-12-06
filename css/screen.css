@@ -1,0 +1,150 @@
+/*****  screen.css: Screen Styles  *****/
+/* CSS - Palette color codes */
+/* Palette URL: http://paletton.com/#uid=30I0u0k3juI07VD1gG06bqfa3md */
+/* Primary color */
+/* Secondary color 1 */
+/* Secondary color 2 */
+html {
+  box-sizing: border-box;
+  background-color: #537969;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+/*   Typography, color, etc.   */
+/*   Layout is farther down.   */
+/*******************************/
+/* Basic element hierarchy:    */
+/* <header>                    */
+/* <body>                      */
+/*   <main> <h1>               */
+/*     <article> <h2>          */
+/*   <nav>                     */
+/*   <footer>                  */
+/*******************************/
+body {
+  font-family: Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #f1f2f1;
+}
+h1 {
+  font-size: 1.375em;
+  line-height: 1.500em;
+  /* font + 0.125em */
+}
+h2 {
+  font-size: 1.250em;
+  line-height: 1.375em;
+}
+legend {
+  font-size: 1.250em;
+  line-height: 1.375em;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+legend,
+b,
+strong {
+  font-weight: bold;
+}
+i,
+em {
+  font-style: italic;
+}
+/* Layout *************************************/
+/* “CSS doesn't define where to place things; */
+/* it defines HOW to place them.              */
+/* Like the Tao, it does nothing,             */
+/* but through it, all things get done.” - me */
+/**/
+/*[ Default; no media query ]*********************/
+/* Targets a [12.5 em < screen < 37.5 em] screen */
+body {
+  max-width: 60em;
+}
+#text,
+#quote {
+  border-color: #537969 #537969 #537969 #5b5b7c;
+  border-style: solid;
+  border-width: 0 0 1em 1em;
+  padding: 0 0 0.875em 0;
+  text-align: left;
+}
+#photo,
+#link {
+  border-color: #537969 #5b5b7c #537969 #537969;
+  border-style: solid;
+  border-width: 0 1em 1em 0;
+  padding: 0 0 0.875em 0;
+  text-align: right;
+}
+.label {
+  display: block;
+}
+.h2back {
+  display: inline-block;
+  min-width: 15em;
+  border-color: #537969 #537969 #5b5b7c #537969;
+  border-style: solid;
+}
+.label h2 {
+  margin: -1.375em 0 0.375em 0;
+}
+#text .h2back,
+#quote .h2back {
+  border-width: 0 1.6875em 1.6875em 0;
+}
+#photo .h2back,
+#link .h2back {
+  border-width: 0 0 1.6875em 1.6875em;
+}
+section {
+  display: inline-block;
+  background-color: #fcf3e8;
+  color: #5b5b7c;
+  border-style: solid;
+  border-color: #537969;
+  padding: 0.375em;
+}
+#text section,
+#quote section {
+  margin: 0 0 0 -0.375em;
+  border-width: 0 1.375em 0 0;
+}
+#photo section,
+#link section {
+  margin: 0 -0.375em 0 0;
+  border-width: 0 0 0 1.375em;
+}
+main a {
+  color: #537969;
+}
+main a:hover {
+  color: #748f84;
+}
+/*********************************************[ screen < 12.5 em ]*/
+/* This is a weirdly small size of viewport, _not_ the default!   */
+/* This uses ‘em’ instead of ‘%’ to enforce minimums for spacings */
+/******************************************[ 12.5 em < screen < 37.5 em ]*/
+/* Switch from ‘em’ to ‘%’ to allow dynamic/responsive sizing of spaces. */
+/**********************************[ 37.5 em < screen < 45.25 em ]*/
+/* Limit width of <article>, to limit the length of lines of text */
+/* 37.5 display-em -> 56.25 print-em                              */
+/* Print-em better estimates the number of characters on a line   */
+@media all and (min-width: 37.5em) {
+  main a {
+    text-decoration: none;
+  }
+  main a:hover {
+    color: #537969;
+    text-shadow: #748f84 0 0 28px;
+    /* glows a little */
+  }
+}
+/**********************************[ 45.25 em < screen < 60 em ]*/
+/**********************************[ 60 em < screen ]*/

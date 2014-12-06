@@ -11,53 +11,68 @@
         Practically an impact
       %article#text
         .label
+          .h2back
           %h2
             Posted
         {block:Text}
         %section
-          {block:Title}
-          %h3
-            {Title}
-          {/block:Title}
-          {Body}
-        {/block:Text}
+          #bar
+            &nbsp;
+            {block:Title}
+            %h3
+              {Title}
+            {/block:Title}
+            {Body}
+          {/block:Text}
+      %article#photo
+        .label
+          .h2back
+          %h2
+            Framed
+        %section
+          #bar
+            &nbsp;
+            {block:Photo}
+            {/block:Photo}
       %article#quote
         .label
+          .h2back
           %h2
-            Read
+            Quotes
         {block:Quote}
         %section
-          %blockquote
-            {Quote}
-          {block:Source}
-          .source
-            {Source}
-          {/block:Source}
-        {/block:Quote}
-      %article#photo
-        %h2
-          Framed
-        {block:Photo}
-        {/block:Photo}
+          #bar
+            &nbsp;
+            %blockquote
+              {Quote}
+            {block:Source}
+            .source
+              {Source}
+            {/block:Source}
+          {/block:Quote}
       %article#link
-        %h2
-          Linked
+        .label
+          .h2back
+          %h2
+            Linked
         {block:Link}
         %section
-          .link
-          %a{href:"{URL}"} {Name}
-          {block:Thumbnail}
-          %a{href:"{URL}"} {Thumbnail}
-          {block:Host}
-          .caption
-            via {Host}
-          {/block:Host}
-          {/block:Thumbnail}
-          {block:Description}
-          .describe
-            {Description}
-          {/block:Description}
-        {/block:Link}
+          #bar
+            &nbsp;
+            .link
+            %a{href:"{URL}"} {Name}
+            {block:Thumbnail}
+            %a{href:"{URL}"} {Thumbnail}
+            {block:Host}
+            .caption
+              via {Host}
+            {/block:Host}
+            {/block:Thumbnail}
+            {block:Description}
+            .describe
+              {Description}
+            {/block:Description}
+          {/block:Link}
     %nav
     %footer
 

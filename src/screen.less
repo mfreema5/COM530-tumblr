@@ -1,6 +1,6 @@
 /*****  screen.css: Screen Styles  *****/
 
-@import (reference) "colors.less";
+@import "colors.less";
 
 @default-font-stack: Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
 
@@ -27,6 +27,7 @@ html {
 
 body {
   font-family: @default-font-stack;
+  color: @greenly-1;
 }
 
 h1 {
@@ -39,7 +40,12 @@ h2 {
   line-height:   1.375em;
 }
 
-h1,h2,h3,h4,h5,h6,b,strong { font-weight: bold; }
+legend {
+  font-size:     1.250em;
+  line-height:   1.375em;
+}
+
+h1,h2,h3,h4,h5,h6,legend,b,strong { font-weight: bold; }
 
 i,em { font-style: italic; }
 
@@ -53,6 +59,77 @@ i,em { font-style: italic; }
 
 /*[ Default; no media query ]*********************/
 /* Targets a [12.5 em < screen < 37.5 em] screen */
+
+body {
+  max-width: 60em;
+}
+
+#text, #quote {
+  border-color: @greenly-5 @greenly-5 @greenly-5 @purply-5;
+  border-style: solid;
+  border-width: 0 0 1em 1em;
+  padding: 0 0 0.875em 0;
+  text-align: left;
+}
+
+#photo, #link {
+  border-color: @greenly-5 @purply-5 @greenly-5 @greenly-5;
+  border-style: solid;
+  border-width: 0 1em 1em 0;
+  padding: 0 0 0.875em 0;
+  text-align: right;
+}
+
+.label {
+  display: block;
+}
+
+.h2back {
+  display: inline-block;
+  min-width: 15em;
+  border-color: @greenly-5 @greenly-5 @purply-5 @greenly-5;
+  border-style: solid;
+}
+
+.label h2 {
+  margin: -1.375em 0 0.375em 0;
+}
+
+
+#text .h2back, #quote .h2back {
+  border-width: 0 1.6875em 1.6875em 0;
+}
+
+#photo .h2back, #link .h2back {
+  border-width: 0 0 1.6875em 1.6875em;
+}
+
+section {
+  display: inline-block;
+  background-color: @sandy-3;
+  color: @purply-5;
+  border-style: solid;
+  border-color: @greenly-5;
+  padding: 0.375em;
+}
+
+#text section, #quote section {
+  margin:  0 0 0 -0.375em;
+  border-width: 0 1.375em 0 0;
+}
+
+#photo section, #link section {
+  margin:  0 -0.375em 0 0;
+  border-width: 0 0 0 1.375em;
+}
+
+main a {
+  color: @greenly-5;
+}
+
+main a:hover {
+  color: @greenly-4;
+}
 
 
 /*********************************************[ screen < 12.5 em ]*/
@@ -74,6 +151,17 @@ i,em { font-style: italic; }
 /* Print-em better estimates the number of characters on a line   */
 
 @media all and ( min-width: 37.5em ) {
+
+  main a {
+    text-decoration: none;
+  }
+
+  main a:hover {
+    color: @greenly-5;
+    text-shadow: @greenly-4 0 0 28px;
+    /* glows a little */
+  }
+
 }
 
 /**********************************[ 45.25 em < screen < 60 em ]*/
@@ -88,5 +176,19 @@ i,em { font-style: italic; }
 
 /*[MJF - Fall 2014]************************************/
 
+/*
+fieldset {
+  display: inline-block;
+  min-width: 15em;
+  margin: 0 0 0 0;
+  border-color: @purply-5 @greenly-5 @greenly-5 @greenly-5;
+  border-style: solid;
+  border-width: 1.6875em 1.625em 0 0;
+}
 
+legend {
+  color: @greenly-1;
+  background-color: @purply-5;
+}
+ */
 

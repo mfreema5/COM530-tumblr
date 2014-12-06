@@ -13,70 +13,92 @@
       </h1>
       <article id="text">
         <div class="label">
+          <div class="h2back"></div>
           <h2>
             Posted
           </h2>
         </div>
         {block:Text}
         <section>
-          {block:Title}
-          <h3>
-            {Title}
-          </h3>
-          {/block:Title}
-          {Body}
+          <div id="bar">
+            &nbsp;
+            {block:Title}
+            <h3>
+              {Title}
+            </h3>
+            {/block:Title}
+            {Body}
+          </div>
+          {/block:Text}
         </section>
-        {/block:Text}
+      </article>
+      <article id="photo">
+        <div class="label">
+          <div class="h2back"></div>
+          <h2>
+            Framed
+          </h2>
+        </div>
+        <section>
+          <div id="bar">
+            &nbsp;
+            {block:Photo}
+            {/block:Photo}
+          </div>
+        </section>
       </article>
       <article id="quote">
         <div class="label">
+          <div class="h2back"></div>
           <h2>
-            Read
+            Quotes
           </h2>
         </div>
         {block:Quote}
         <section>
-          <blockquote>
-            {Quote}
-          </blockquote>
-          {block:Source}
-          <div class="source">
-            {Source}
+          <div id="bar">
+            &nbsp;
+            <blockquote>
+              {Quote}
+            </blockquote>
+            {block:Source}
+            <div class="source">
+              {Source}
+            </div>
+            {/block:Source}
           </div>
-          {/block:Source}
+          {/block:Quote}
         </section>
-        {/block:Quote}
-      </article>
-      <article id="photo">
-        <h2>
-          Framed
-        </h2>
-        {block:Photo}
-        {/block:Photo}
       </article>
       <article id="link">
-        <h2>
-          Linked
-        </h2>
+        <div class="label">
+          <div class="h2back"></div>
+          <h2>
+            Linked
+          </h2>
+        </div>
         {block:Link}
         <section>
-          <div class="link"></div>
-          <a href="{URL}">{Name}</a>
-          {block:Thumbnail}
-          <a href="{URL}">{Thumbnail}</a>
-          {block:Host}
-          <div class="caption">
-            via {Host}
+          <div id="bar">
+            &nbsp;
+            <div class="link"></div>
+            <a href="{URL}">{Name}</a>
+            {block:Thumbnail}
+            <a href="{URL}">{Thumbnail}</a>
+            {block:Host}
+            <div class="caption">
+              via {Host}
+            </div>
+            {/block:Host}
+            {/block:Thumbnail}
+            {block:Description}
+            <div class="describe">
+              {Description}
+            </div>
+            {/block:Description}
           </div>
-          {/block:Host}
-          {/block:Thumbnail}
-          {block:Description}
-          <div class="describe">
-            {Description}
-          </div>
-          {/block:Description}
+          {/block:Link}
         </section>
-        {/block:Link}
       </article>
     </main>
     <nav></nav>
