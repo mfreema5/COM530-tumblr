@@ -107,19 +107,42 @@ section {
   display: inline-block;
   background-color: #fcf3e8;
   color: #5b5b7c;
-  border-style: solid;
-  border-color: #537969;
   padding: 0.375em;
 }
 #text section,
 #quote section {
   margin: 0 0 0 -0.375em;
-  border-width: 0 1.375em 0 0;
+  border-style: solid;
+  border-color: #537969;
+  border-width: 0 1.000em 0 0;
 }
 #photo section,
 #link section {
   margin: 0 -0.375em 0 0;
-  border-width: 0 0 0 1.375em;
+  border-style: solid;
+  border-color: #537969;
+  border-width: 0 0 0 1.000em;
+}
+#text .bar,
+#quote .bar {
+  margin: -0.8125em -1.375em -0.75em -0.375em;
+  border-style: solid;
+  border-color: #5b5b7c #537969;
+  border-width: 1.000em 1.000em 0 0;
+}
+#text section + section .bar,
+#quote section + section .bar {
+  margin: -0.8125em -1.375em -0.75em -1.5em;
+  border-style: solid;
+  border-color: #5b5b7c #537969;
+  border-width: 1.000em 1.000em 0 0;
+}
+#photo .bar,
+#link .bar {
+  margin: -0.8125em -0.375em -0.75em -1.375em;
+  border-style: solid;
+  border-color: #5b5b7c #537969;
+  border-width: 1.000em 0 0 1.000em;
 }
 main a {
   color: #537969;
