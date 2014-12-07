@@ -68,12 +68,10 @@ body {
   max-width: 60em;
 }
 article {
-  display: inline-block;
   margin-bottom: 0.875em;
 }
 #text,
 #quote {
-  clear: right;
   margin-right: 0.625em;
   border-color: #537969 #537969 #537969 #5b5b7c;
   border-style: solid;
@@ -83,7 +81,6 @@ article {
 }
 #photo,
 #link {
-  clear: left;
   margin-left: 0.625em;
   border-color: #537969 #5b5b7c #537969 #537969;
   border-style: solid;
