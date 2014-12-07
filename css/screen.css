@@ -67,6 +67,9 @@ em {
 body {
   max-width: 60em;
 }
+article {
+  margin-bottom: 0.875em;
+}
 #text,
 #quote {
   border-color: #537969 #537969 #537969 #5b5b7c;
