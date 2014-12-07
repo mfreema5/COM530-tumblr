@@ -35,10 +35,11 @@
             Framed
         %section
           .bar
-          .under34
-            %img{:src => "{PhotoURL-250}", :alt => "{PhotoWidth-250}x{PhotoWidth-250} {PhotoAlt}"}
-          .over34
-            %img{:src => "{PhotoURL-400}", :alt => "{PhotoWidth-400}x{PhotoWidth-400} {PhotoAlt}"}
+          %a{:href => "{LinkURL}"}
+            .under34
+              %img{:src => "{PhotoURL-250}", :alt => "{PhotoWidth-250}x{PhotoWidth-250} {PhotoAlt}"}
+            .over34
+              %img{:src => "{PhotoURL-400}", :alt => "{PhotoWidth-400}x{PhotoWidth-400} {PhotoAlt}"}
           {block:Caption}
           .describe
             {Caption}

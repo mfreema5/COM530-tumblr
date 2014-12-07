@@ -67,10 +67,6 @@ i,em { font-style: italic; }
 /*[ Default; no media query ]*********************/
 /* Targets a [12.5 em < screen < 37.5 em] screen */
 
-main {
-  padding: 0 1.3125% 0 1.3125%;
-}
-
 fieldset {
   margin: 0 0 0.875em -0.625em;
   border-style: solid;
@@ -204,12 +200,24 @@ main a:hover {
 /* This uses ‘em’ instead of ‘%’ to enforce minimums for spacings */
 
 @media all and ( min-width: 0 ) {
+
+  main {
+    min-width: 12.172em;
+    padding: 0 0.164em;
+    /* 12.172 + 0.164 +0.164 = 12.5 */
+  }
+
 }
 
 /******************************************[ 12.5 em < screen < 34.0 em ]*/
 /* Switch from ‘em’ to ‘%’ to allow dynamic/responsive sizing of spaces. */
 
 @media all and ( min-width: 12.5em ) {
+
+  main {
+    padding: 0 1.3125% 0 1.3125%;
+  }
+
 }
 
 /**********************************[ 34.5 em < screen < 60.0 em ]*/
@@ -270,7 +278,7 @@ main a:hover {
   .other-photo:extend(.other-link all) {}
 
   .other-quote + .other-quote {
-    margin: 2.125em 0 0.875em 0.625em;
+    margin: 2.0625em 0 0.875em 0.625em;
     border-width: 0;
     padding-bottom: 1.875em;
   }
