@@ -44,6 +44,10 @@ h2 {
   font-size: 1.250em;
   line-height: 1.375em;
 }
+h3 {
+  font-size: 1.125em;
+  line-height: 1.250em;
+}
 h1,
 h2,
 h3,
@@ -97,9 +101,8 @@ article {
   text-align: right;
 }
 .label h2 {
-  /*  margin: -1.625em 0 0.375em 0;  */
-  /*  Renders differently online?  */
-  margin: -1.375em 0 0.375em 0;
+  margin: -1.625em 0 0.375em 0;
+  /* margin: -1.375em 0 0.375em 0; */
 }
 .h2back {
   display: inline-block;
@@ -146,6 +149,27 @@ section {
   border-color: #5b5b7c #537969;
   border-width: 1.000em 0 0 1.000em;
 }
+blockquote {
+  font-size: 1.250em;
+  font-style: italic;
+  text-align: center;
+  padding-bottom: 0.375em;
+}
+.describe {
+  color: #b19979;
+}
+.caption {
+  font-size: 0.675em;
+}
+.other-photo img {
+  border: #f5eadb 2px solid;
+}
+.under34 {
+  display: block;
+}
+.over34 {
+  display: none;
+}
 main a {
   color: #537969;
 }
@@ -155,8 +179,20 @@ main a:hover {
 /*********************************************[ screen < 12.5 em ]*/
 /* This is a weirdly small size of viewport, _not_ the default!   */
 /* This uses ‘em’ instead of ‘%’ to enforce minimums for spacings */
+@media all and (min-width: 0) {
+  main {
+    min-width: 12.172em;
+    padding: 0 0.164em;
+    /* 12.172 + 0.164 +0.164 = 12.5 */
+  }
+}
 /******************************************[ 12.5 em < screen < 34.0 em ]*/
 /* Switch from ‘em’ to ‘%’ to allow dynamic/responsive sizing of spaces. */
+@media all and (min-width: 12.5em) {
+  main {
+    padding: 0 1.3125% 0 1.3125%;
+  }
+}
 /**********************************[ 34.5 em < screen < 60.0 em ]*/
 /* Limit width of <section>, to limit the length of lines of text */
 /* 30 display-em -> 45 print-em ; 20 display-em -> 30 print-em    */
@@ -201,7 +237,7 @@ main a:hover {
   .other-quote + .other-quote,
   .other-link + .other-link,
   .other-photo + .other-photo {
-    margin: 2.125em 0 0.875em 0.625em;
+    margin: 2.0625em 0 0.875em 0.625em;
     border-width: 0;
     padding-bottom: 1.875em;
   }
@@ -214,6 +250,12 @@ main a:hover {
   .other-link + .other-link .bar,
   .other-photo + .other-photo .bar {
     margin-right: -1.5em;
+  }
+  .under34 {
+    display: none;
+  }
+  .over34 {
+    display: block;
   }
   main a {
     text-decoration: none;
