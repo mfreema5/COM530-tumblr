@@ -3,62 +3,100 @@
     %title Practically an impact
     %meta{:charset => "utf-8"}/
     %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
-    %link{:href => "http://mfreema5.github.io/COM530-tumblr/css/reset.css", :media => "screen,print", :rel => "stylesheet"}/
-    %link{:href => "http://mfreema5.github.io/COM530-tumblr/css/screen.css", :rel => "stylesheet"}/
+    %link{:href => "css/reset.css", :media => "screen,print", :rel => "stylesheet"}/
+    %link{:href => "css/screen.css", :rel => "stylesheet"}/
   %body
     %main
-      %h1
-        Practically an impact
-      {block:Posts}{block:Text}
-      %article#text
+      %fieldset
+        %legend
+          %h1 Practically an impact
+      <!-- {block:Posts}{block:Text} -->
+      %article.text
         .label
           .h2back
           %h2
             Posted
         %section
           .bar
-            &nbsp;
           {block:Title}
           %h3
             {Title}
           {/block:Title}
           {Body}
-      {/block:Text}
-      {block:Photo}
-      %article#photo
+      <!-- {/block:Text}
+      {block:Photo} -->
+      %article.text
+        .label
+          .h2back
+          %h2
+            Posted
+        %section
+          .bar
+          {block:Title}
+          %h3
+            {Title}
+          {/block:Title}
+          {Body}
+      <!-- {/block:Text}
+      {block:Photo} -->
+      %article.text
+        .label
+          .h2back
+          %h2
+            Posted
+        %section
+          .bar
+          {block:Title}
+          %h3
+            {Title}
+          {/block:Title}
+          {Body}
+      <!-- {/block:Text}
+      {block:Photo} -->
+      %article.other-photo
         .label
           .h2back
           %h2
             Framed
         %section
           .bar
-            &nbsp;
-      {/block:Photo}
-      {block:Quote}
-      %article#quote
+      <!-- {/block:Photo}
+      {block:Quote} -->
+      %article.other-quote
         .label
           .h2back
           %h2
             Quotes
         %section
           .bar
-            &nbsp;
           %blockquote
             {Quote}
           {block:Source}
           .source
-            {Source}
+            {SourceFirst}
           {/block:Source}
-      {/block:Quote}
-      {block:Link}
-      %article#link
+      %article.other-quote
+        .label
+          .h2back
+          %h2
+            Quotes
+        %section
+          .bar
+          %blockquote
+            {Quote}
+          {block:Source}
+          .source
+            {SourceLast}
+          {/block:Source}
+      <!-- {/block:Quote}
+      {block:Link} -->
+      %article.other-link
         .label
           .h2back
           %h2
             Linked
         %section
           .bar
-            &nbsp;
           .link
             %a{href:"{URL}"} {Name}
             {block:Thumbnail}
@@ -70,7 +108,7 @@
           {block:Description}
           .describe
             {Description}{/block:Description}
-      {/block:Link}{/block:Posts}
+      <!-- {/block:Link}{/block:Posts} -->
     %nav
     %footer
 

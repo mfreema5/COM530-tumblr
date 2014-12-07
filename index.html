@@ -3,16 +3,18 @@
     <title>Practically an impact</title>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <link href="http://mfreema5.github.io/COM530-tumblr/css/reset.css" media="screen,print" rel="stylesheet">
-    <link href="http://mfreema5.github.io/COM530-tumblr/css/screen.css" rel="stylesheet">
+    <link href="css/reset.css" media="screen,print" rel="stylesheet">
+    <link href="css/screen.css" rel="stylesheet">
   </head>
   <body>
     <main>
-      <h1>
-        Practically an impact
-      </h1>
-      {block:Posts}{block:Text}
-      <article id="text">
+      <fieldset>
+        <legend>
+          <h1>Practically an impact</h1>
+        </legend>
+      </fieldset>
+      <!-- {block:Posts}{block:Text} -->
+      <article class="text">
         <div class="label">
           <div class="h2back"></div>
           <h2>
@@ -20,9 +22,7 @@
           </h2>
         </div>
         <section>
-          <div class="bar">
-            &nbsp;
-          </div>
+          <div class="bar"></div>
           {block:Title}
           <h3>
             {Title}
@@ -31,9 +31,47 @@
           {Body}
         </section>
       </article>
-      {/block:Text}
-      {block:Photo}
-      <article id="photo">
+      <!-- {/block:Text}
+      {block:Photo} -->
+      <article class="text">
+        <div class="label">
+          <div class="h2back"></div>
+          <h2>
+            Posted
+          </h2>
+        </div>
+        <section>
+          <div class="bar"></div>
+          {block:Title}
+          <h3>
+            {Title}
+          </h3>
+          {/block:Title}
+          {Body}
+        </section>
+      </article>
+      <!-- {/block:Text}
+      {block:Photo} -->
+      <article class="text">
+        <div class="label">
+          <div class="h2back"></div>
+          <h2>
+            Posted
+          </h2>
+        </div>
+        <section>
+          <div class="bar"></div>
+          {block:Title}
+          <h3>
+            {Title}
+          </h3>
+          {/block:Title}
+          {Body}
+        </section>
+      </article>
+      <!-- {/block:Text}
+      {block:Photo} -->
+      <article class="other-photo">
         <div class="label">
           <div class="h2back"></div>
           <h2>
@@ -41,14 +79,12 @@
           </h2>
         </div>
         <section>
-          <div class="bar">
-            &nbsp;
-          </div>
+          <div class="bar"></div>
         </section>
       </article>
-      {/block:Photo}
-      {block:Quote}
-      <article id="quote">
+      <!-- {/block:Photo}
+      {block:Quote} -->
+      <article class="other-quote">
         <div class="label">
           <div class="h2back"></div>
           <h2>
@@ -56,22 +92,39 @@
           </h2>
         </div>
         <section>
-          <div class="bar">
-            &nbsp;
-          </div>
+          <div class="bar"></div>
           <blockquote>
             {Quote}
           </blockquote>
           {block:Source}
           <div class="source">
-            {Source}
+            {SourceFirst}
           </div>
           {/block:Source}
         </section>
       </article>
-      {/block:Quote}
-      {block:Link}
-      <article id="link">
+      <article class="other-quote">
+        <div class="label">
+          <div class="h2back"></div>
+          <h2>
+            Quotes
+          </h2>
+        </div>
+        <section>
+          <div class="bar"></div>
+          <blockquote>
+            {Quote}
+          </blockquote>
+          {block:Source}
+          <div class="source">
+            {SourceLast}
+          </div>
+          {/block:Source}
+        </section>
+      </article>
+      <!-- {/block:Quote}
+      {block:Link} -->
+      <article class="other-link">
         <div class="label">
           <div class="h2back"></div>
           <h2>
@@ -79,9 +132,7 @@
           </h2>
         </div>
         <section>
-          <div class="bar">
-            &nbsp;
-          </div>
+          <div class="bar"></div>
           <div class="link">
             <a href="{URL}">{Name}</a>
             {block:Thumbnail}
@@ -98,7 +149,7 @@
           </div>
         </section>
       </article>
-      {/block:Link}{/block:Posts}
+      <!-- {/block:Link}{/block:Posts} -->
     </main>
     <nav></nav>
     <footer></footer>

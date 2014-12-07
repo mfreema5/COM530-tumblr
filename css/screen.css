@@ -29,15 +29,18 @@ body {
   color: #f1f2f1;
 }
 h1 {
+  /* Wrapping <h1> in <legend> gives values */
+  /* from “reset.css” precedence over <body> */
+  font-family: Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #b19979;
+  background-color: #f5eadb;
   font-size: 1.375em;
   line-height: 1.500em;
   /* font + 0.125em */
+  border-radius: 0.125em;
+  padding: 0 0.250em;
 }
 h2 {
-  font-size: 1.250em;
-  line-height: 1.375em;
-}
-legend {
   font-size: 1.250em;
   line-height: 1.375em;
 }
@@ -64,87 +67,81 @@ em {
 /**/
 /*[ Default; no media query ]*********************/
 /* Targets a [12.5 em < screen < 37.5 em] screen */
-body {
-  max-width: 60em;
+fieldset {
+  margin: 0 0 0.875em -0.625em;
+  border-style: solid;
+  border-width: 1.375em 1.375em 0 0;
+  border-color: #b19979 #537969;
+  padding: 0 0 0 0.625em;
 }
 article {
+  clear: both;
+  display: inline-block;
   margin-bottom: 0.875em;
-}
-#text,
-#quote {
-  margin-right: 0.625em;
-  border-color: #537969 #537969 #537969 #5b5b7c;
+  border-color: #537969 #5b5b7c;
   border-style: solid;
-  border-width: 0 0 1.000em 1.000em;
   padding: 0 0 0.875em 0;
+}
+.text {
+  float: left;
+  margin-right: 0.625em;
+  border-width: 0 0 1.000em 1.000em;
+  border-radius: 0.3125em 0 0 0;
   text-align: left;
 }
-#photo,
-#link {
+[class^=other] {
+  float: right;
   margin-left: 0.625em;
-  border-color: #537969 #5b5b7c #537969 #537969;
-  border-style: solid;
   border-width: 0 1.000em 1.000em 0;
-  padding: 0 0 0.875em 0;
+  border-radius: 0 0.3125em 0 0;
   text-align: right;
 }
-.label {
-  display: block;
+.label h2 {
+  /*  margin: -1.625em 0 0.375em 0;  */
+  /*  Renders differently online?  */
+  margin: -1.375em 0 0.375em 0;
 }
 .h2back {
   display: inline-block;
-  min-width: 15em;
+  min-width: 8em;
   border-color: #537969 #537969 #5b5b7c #537969;
   border-style: solid;
 }
-.label h2 {
-  margin: -1.625em 0 0.375em 0;
-}
-#text .h2back,
-#quote .h2back {
+.text .h2back {
+  margin-right: -4em;
   border-width: 0 1.6875em 1.6875em 0;
 }
-#photo .h2back,
-#link .h2back {
+[class^=other] .h2back {
+  margin-left: -4em;
   border-width: 0 0 1.6875em 1.6875em;
 }
 section {
   display: inline-block;
+  min-width: 8.3125em;
   background-color: #fcf3e8;
   color: #5b5b7c;
   padding: 0.375em;
 }
-#text section,
-#quote section {
+.text section {
   margin: 0 0 0 -0.375em;
   border-style: solid;
   border-color: #537969;
   border-width: 0 1.000em 0 0;
 }
-#photo section,
-#link section {
+[class^=other] section {
   margin: 0 -0.375em 0 0;
   border-style: solid;
   border-color: #537969;
   border-width: 0 0 0 1.000em;
 }
-#text .bar,
-#quote .bar {
-  margin: -0.8125em -1.375em -0.75em -0.375em;
+.text .bar {
+  margin: -0.8125em -1.375em 0 -0.375em;
   border-style: solid;
   border-color: #5b5b7c #537969;
   border-width: 1.000em 1.000em 0 0;
 }
-#text section + section .bar,
-#quote section + section .bar {
-  margin: -0.8125em -1.375em -0.75em -1.5em;
-  border-style: solid;
-  border-color: #5b5b7c #537969;
-  border-width: 1.000em 1.000em 0 0;
-}
-#photo .bar,
-#link .bar {
-  margin: -0.8125em -0.375em -0.75em -1.375em;
+[class^=other] .bar {
+  margin: -0.8125em -0.375em 0 -1.375em;
   border-style: solid;
   border-color: #5b5b7c #537969;
   border-width: 1.000em 0 0 1.000em;
@@ -158,13 +155,66 @@ main a:hover {
 /*********************************************[ screen < 12.5 em ]*/
 /* This is a weirdly small size of viewport, _not_ the default!   */
 /* This uses ‘em’ instead of ‘%’ to enforce minimums for spacings */
-/******************************************[ 12.5 em < screen < 37.5 em ]*/
+/******************************************[ 12.5 em < screen < 34.0 em ]*/
 /* Switch from ‘em’ to ‘%’ to allow dynamic/responsive sizing of spaces. */
-/**********************************[ 37.5 em < screen < 45.25 em ]*/
-/* Limit width of <article>, to limit the length of lines of text */
-/* 37.5 display-em -> 56.25 print-em                              */
+/**********************************[ 34.5 em < screen < 60.0 em ]*/
+/* Limit width of <section>, to limit the length of lines of text */
+/* 30 display-em -> 45 print-em ; 20 display-em -> 30 print-em    */
 /* Print-em better estimates the number of characters on a line   */
-@media all and (min-width: 37.5em) {
+@media all and (min-width: 34.5em) {
+  main {
+    max-width: 94.125%;
+    padding: 0 0 0 2.125%;
+  }
+  fieldset {
+    margin: 0.375% 0 0.875em -0.75%;
+    border-style: solid;
+    border-width: 1.375em 8em 0 0;
+    border-color: #b19979 #537969;
+    padding: 0 0 0 0.75%;
+  }
+  .text {
+    max-width: 20em;
+  }
+  .text + .text {
+    clear: none;
+    margin: 2.125em 0.625em 0.875em 0;
+    border-width: 0;
+    padding-bottom: 1.875em;
+    /* extra padding to make up  */
+    /* space from missing border */
+  }
+  .text + .text .label {
+    display: none;
+  }
+  .text + .text .bar {
+    margin-left: -1.5em;
+    margin-right: -3.625em;
+  }
+  [class^=other] {
+    max-width: 30em;
+  }
+  [class^=other] + [class^=other] {
+    clear: none;
+  }
+  /* LESS automagical selector stacking */
+  .other-quote + .other-quote,
+  .other-link + .other-link,
+  .other-photo + .other-photo {
+    margin: 2.125em 0 0.875em 0.625em;
+    border-width: 0;
+    padding-bottom: 1.875em;
+  }
+  .other-quote + .other-quote .label,
+  .other-link + .other-link .label,
+  .other-photo + .other-photo .label {
+    display: none;
+  }
+  .other-quote + .other-quote .bar,
+  .other-link + .other-link .bar,
+  .other-photo + .other-photo .bar {
+    margin-right: -1.5em;
+  }
   main a {
     text-decoration: none;
   }
@@ -174,5 +224,4 @@ main a:hover {
     /* glows a little */
   }
 }
-/**********************************[ 45.25 em < screen < 60 em ]*/
 /**********************************[ 60 em < screen ]*/
