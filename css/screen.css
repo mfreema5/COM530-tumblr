@@ -71,6 +71,9 @@ em {
 /**/
 /*[ Default; no media query ]*********************/
 /* Targets a [12.5 em < screen < 37.5 em] screen */
+main {
+  padding: 0 1.3125% 0 1.3125%;
+}
 fieldset {
   margin: 0 0 0.875em -0.625em;
   border-style: solid;
