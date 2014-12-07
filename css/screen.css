@@ -44,6 +44,10 @@ h2 {
   font-size: 1.250em;
   line-height: 1.375em;
 }
+h3 {
+  font-size: 1.125em;
+  line-height: 1.250em;
+}
 h1,
 h2,
 h3,
@@ -145,6 +149,27 @@ section {
   border-color: #5b5b7c #537969;
   border-width: 1.000em 0 0 1.000em;
 }
+blockquote {
+  font-size: 1.250em;
+  font-style: italic;
+  text-align: center;
+  padding-bottom: 0.375em;
+}
+.describe {
+  color: #b19979;
+}
+.caption {
+  font-size: 0.675em;
+}
+.other-photo img {
+  border: #f5eadb 2px solid;
+}
+.under34 {
+  display: block;
+}
+.over34 {
+  display: none;
+}
 main a {
   color: #537969;
 }
@@ -213,6 +238,12 @@ main a:hover {
   .other-link + .other-link .bar,
   .other-photo + .other-photo .bar {
     margin-right: -1.5em;
+  }
+  .under34 {
+    display: none;
+  }
+  .over34 {
+    display: block;
   }
   main a {
     text-decoration: none;

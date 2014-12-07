@@ -47,6 +47,11 @@ h2 {
   line-height:   1.375em;
 }
 
+h3 {
+  font-size:     1.125em;
+  line-height:   1.250em;
+}
+
 h1,h2,h3,h4,h5,h6,legend,b,strong { font-weight: bold; }
 
 i,em { font-style: italic; }
@@ -153,6 +158,34 @@ section {
   border-width: 1.000em 0 0 1.000em;
 }
 
+blockquote {
+  font-size: 1.250em;
+  font-style: italic;
+  text-align: center;
+  padding-bottom: 0.375em;
+}
+
+.describe {
+  color: @sandy-6;
+}
+
+.caption {
+  font-size: 0.675em;
+}
+
+.other-photo img {
+  border: @sandy-4 2px solid;
+}
+
+.under34 {
+  display: block;
+}
+
+.over34 {
+  display: none;
+}
+
+
 main a {
   color: @greenly-5;
 }
@@ -249,7 +282,13 @@ main a:hover {
     margin-right: -1.500em;
   }
 
+  .under34 {
+    display: none;
+  }
 
+  .over34 {
+    display: block;
+  }
 
   main a {
     text-decoration: none;

@@ -8,11 +8,12 @@
     %link{:href => "http://mfreema5.github.io/COM530-tumblr/css/screen.css", :rel => "stylesheet"}/
   %body
     %main
-      %h1
-        %fieldset
-          %legend
+      %fieldset
+        %legend
+          %h1
             Practically an impact
-      {block:Posts}{block:Text}
+      {block:Posts}
+      {block:Text}
       %article.text
         .label
           .h2back
@@ -34,6 +35,14 @@
             Framed
         %section
           .bar
+          .under34
+            %img{:src => "{PhotoURL-250}", :alt => "{PhotoWidth-250}x{PhotoWidth-250} {PhotoAlt}"}
+          .over34
+            %img{:src => "{PhotoURL-400}", :alt => "{PhotoWidth-400}x{PhotoWidth-400} {PhotoAlt}"}
+          {block:Caption}
+          .describe
+            {Caption}
+          {/block:Caption}
       {/block:Photo}
       {block:Quote}
       %article.other-quote
@@ -46,7 +55,7 @@
           %blockquote
             {Quote}
           {block:Source}
-          .source
+          .describe
             {Source}
           {/block:Source}
       {/block:Quote}
@@ -59,17 +68,24 @@
         %section
           .bar
           .link
-            %a{href:"{URL}"} {Name}
+            %h3
+              %a{:href => "{URL}"}
+                {Name}
             {block:Thumbnail}
-            %a{href:"{URL}"} {Thumbnail}
-          {block:Host}
-          .caption
-            via {Host}{/block:Host}
-          {/block:Thumbnail}
-          {block:Description}
-          .describe
-            {Description}{/block:Description}
-      {/block:Link}{/block:Posts}
+            %a{:href => "{URL}"}
+              %img{:src => "{Thumbnail}", :alt => "Thumbnail graphic for link." }
+            {/block:Thumbnail}
+            {block:Host}
+            .caption
+              %p
+                via <b>{Host}</b>
+            {/block:Host}
+            {block:Description}
+            .describe
+              {Description}
+            {/block:Description}
+      {/block:Link}
+      {/block:Posts}
     %nav
     %footer
 
