@@ -3,8 +3,8 @@
     %title Practically an impact
     %meta{:charset => "utf-8"}/
     %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
-    %link{:href => "css/reset.css", :media => "screen,print", :rel => "stylesheet"}/
-    %link{:href => "css/screen.css", :rel => "stylesheet"}/
+    %link{:href => "http://mfreema5.github.io/COM530-tumblr/css/reset.css", :media => "screen,print", :rel => "stylesheet"}/
+    %link{:href => "http://mfreema5.github.io/COM530-tumblr/css/screen.css", :rel => "stylesheet"}/
   %body
     %main
       %h1
@@ -14,7 +14,7 @@
           .h2back
           %h2
             Posted
-        <!-- {block:Text} -->
+        {block:Text}
         %section
           .bar
             &nbsp;
@@ -23,27 +23,7 @@
             {Title}
           {/block:Title}
           {Body}
-        <!-- {/block:Text} -->
-        <!-- {block:Text} -->
-        %section
-          .bar
-            &nbsp;
-          {block:Title}
-          %h3
-            {Title}
-          {/block:Title}
-          {Body}
-        <!-- {/block:Text} -->
-        <!-- {block:Text} -->
-        %section
-          .bar
-            &nbsp;
-          {block:Title}
-          %h3
-            {Title}
-          {/block:Title}
-          {Body}
-        <!-- {/block:Text} -->
+        {/block:Text}
       %article#photo
         .label
           .h2back
