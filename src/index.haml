@@ -9,12 +9,12 @@
     %main
       %h1
         Practically an impact
+      {block:Posts}{block:Text}
       %article#text
         .label
           .h2back
           %h2
             Posted
-        {block:Text}
         %section
           .bar
             &nbsp;
@@ -23,23 +23,23 @@
             {Title}
           {/block:Title}
           {Body}
-        {/block:Text}
+      {/block:Text}
+      {block:Photo}
       %article#photo
         .label
           .h2back
           %h2
             Framed
-        {block:Photo}
         %section
           .bar
             &nbsp;
-        {/block:Photo}
+      {/block:Photo}
+      {block:Quote}
       %article#quote
         .label
           .h2back
           %h2
             Quotes
-        {block:Quote}
         %section
           .bar
             &nbsp;
@@ -49,30 +49,28 @@
           .source
             {Source}
           {/block:Source}
-        {/block:Quote}
+      {/block:Quote}
+      {block:Link}
       %article#link
         .label
           .h2back
           %h2
             Linked
-        {block:Link}
         %section
           .bar
             &nbsp;
           .link
-          %a{href:"{URL}"} {Name}
-          {block:Thumbnail}
-          %a{href:"{URL}"} {Thumbnail}
+            %a{href:"{URL}"} {Name}
+            {block:Thumbnail}
+            %a{href:"{URL}"} {Thumbnail}
           {block:Host}
           .caption
-            via {Host}
-          {/block:Host}
+            via {Host}{/block:Host}
           {/block:Thumbnail}
           {block:Description}
           .describe
-            {Description}
-          {/block:Description}
-        {/block:Link}
+            {Description}{/block:Description}
+      {/block:Link}{/block:Posts}
     %nav
     %footer
 

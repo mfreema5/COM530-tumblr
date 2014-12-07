@@ -11,6 +11,7 @@
       <h1>
         Practically an impact
       </h1>
+      {block:Posts}{block:Text}
       <article id="text">
         <div class="label">
           <div class="h2back"></div>
@@ -18,7 +19,6 @@
             Posted
           </h2>
         </div>
-        {block:Text}
         <section>
           <div class="bar">
             &nbsp;
@@ -30,8 +30,9 @@
           {/block:Title}
           {Body}
         </section>
-        {/block:Text}
       </article>
+      {/block:Text}
+      {block:Photo}
       <article id="photo">
         <div class="label">
           <div class="h2back"></div>
@@ -39,14 +40,14 @@
             Framed
           </h2>
         </div>
-        {block:Photo}
         <section>
           <div class="bar">
             &nbsp;
           </div>
         </section>
-        {/block:Photo}
       </article>
+      {/block:Photo}
+      {block:Quote}
       <article id="quote">
         <div class="label">
           <div class="h2back"></div>
@@ -54,7 +55,6 @@
             Quotes
           </h2>
         </div>
-        {block:Quote}
         <section>
           <div class="bar">
             &nbsp;
@@ -68,8 +68,9 @@
           </div>
           {/block:Source}
         </section>
-        {/block:Quote}
       </article>
+      {/block:Quote}
+      {block:Link}
       <article id="link">
         <div class="label">
           <div class="h2back"></div>
@@ -77,29 +78,27 @@
             Linked
           </h2>
         </div>
-        {block:Link}
         <section>
           <div class="bar">
             &nbsp;
           </div>
-          <div class="link"></div>
-          <a href="{URL}">{Name}</a>
-          {block:Thumbnail}
-          <a href="{URL}">{Thumbnail}</a>
+          <div class="link">
+            <a href="{URL}">{Name}</a>
+            {block:Thumbnail}
+            <a href="{URL}">{Thumbnail}</a>
+          </div>
           {block:Host}
           <div class="caption">
-            via {Host}
+            via {Host}{/block:Host}
           </div>
-          {/block:Host}
           {/block:Thumbnail}
           {block:Description}
           <div class="describe">
-            {Description}
+            {Description}{/block:Description}
           </div>
-          {/block:Description}
         </section>
-        {/block:Link}
       </article>
+      {/block:Link}{/block:Posts}
     </main>
     <nav></nav>
     <footer></footer>
