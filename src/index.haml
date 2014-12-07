@@ -1,3 +1,4 @@
+!!!
 %html{:lang => "en"}
   %head
     %title Practically an impact
@@ -10,14 +11,13 @@
       %h1
         Practically an impact
       {block:Posts}{block:Text}
-      %article#text
+      %article.text
         .label
           .h2back
           %h2
             Posted
         %section
           .bar
-            &nbsp;
           {block:Title}
           %h3
             {Title}
@@ -25,24 +25,22 @@
           {Body}
       {/block:Text}
       {block:Photo}
-      %article#photo
+      %article.other-photo
         .label
           .h2back
           %h2
             Framed
         %section
           .bar
-            &nbsp;
       {/block:Photo}
       {block:Quote}
-      %article#quote
+      %article.other-quote
         .label
           .h2back
           %h2
-            Quotes
+            I quote&#133;
         %section
           .bar
-            &nbsp;
           %blockquote
             {Quote}
           {block:Source}
@@ -51,14 +49,13 @@
           {/block:Source}
       {/block:Quote}
       {block:Link}
-      %article#link
+      %article.other-link
         .label
           .h2back
           %h2
-            Linked
+            Check it:
         %section
           .bar
-            &nbsp;
           .link
             %a{href:"{URL}"} {Name}
             {block:Thumbnail}

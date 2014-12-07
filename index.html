@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <title>Practically an impact</title>
@@ -12,7 +13,7 @@
         Practically an impact
       </h1>
       {block:Posts}{block:Text}
-      <article id="text">
+      <article class="text">
         <div class="label">
           <div class="h2back"></div>
           <h2>
@@ -20,9 +21,7 @@
           </h2>
         </div>
         <section>
-          <div class="bar">
-            &nbsp;
-          </div>
+          <div class="bar"></div>
           {block:Title}
           <h3>
             {Title}
@@ -33,7 +32,7 @@
       </article>
       {/block:Text}
       {block:Photo}
-      <article id="photo">
+      <article class="other-photo">
         <div class="label">
           <div class="h2back"></div>
           <h2>
@@ -41,24 +40,20 @@
           </h2>
         </div>
         <section>
-          <div class="bar">
-            &nbsp;
-          </div>
+          <div class="bar"></div>
         </section>
       </article>
       {/block:Photo}
       {block:Quote}
-      <article id="quote">
+      <article class="other-quote">
         <div class="label">
           <div class="h2back"></div>
           <h2>
-            Quotes
+            I quote&#133;
           </h2>
         </div>
         <section>
-          <div class="bar">
-            &nbsp;
-          </div>
+          <div class="bar"></div>
           <blockquote>
             {Quote}
           </blockquote>
@@ -71,17 +66,15 @@
       </article>
       {/block:Quote}
       {block:Link}
-      <article id="link">
+      <article class="other-link">
         <div class="label">
           <div class="h2back"></div>
           <h2>
-            Linked
+            Check it:
           </h2>
         </div>
         <section>
-          <div class="bar">
-            &nbsp;
-          </div>
+          <div class="bar"></div>
           <div class="link">
             <a href="{URL}">{Name}</a>
             {block:Thumbnail}
