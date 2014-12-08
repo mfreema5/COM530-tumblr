@@ -272,7 +272,7 @@ a:hover {
 
   .text + .text {
     clear: none;
-    margin: 2.125em 0.625em 0.875em 0;
+    margin: 2.0625 0.625em 0.875em 0;
     border-width: 0;
     padding-bottom: 1.875em;
     /* extra padding to make up  */
@@ -284,8 +284,8 @@ a:hover {
   }
 
   .text + .text .bar {
-    margin-left: -1.500em;
-    margin-right: -3.625em;
+    margin-left:  -1.500em;
+    margin-right: -2.625em;
   }
 
   [class^=other] {
@@ -294,9 +294,11 @@ a:hover {
 
   [class^=other] + [class^=other] {
     clear: none;
+  /* Allow fraternal to stack */
   }
 
   /* LESS automagical selector stacking */
+  /* To style only identical siblings   */
   .other-link:extend(.other-quote all) {}
   .other-photo:extend(.other-link all) {}
 
@@ -312,6 +314,8 @@ a:hover {
 
   .other-quote + .other-quote .bar {
     margin-right: -1.500em;
+    margin-left:  -2.625em;
+
   }
 
   .under34 {
