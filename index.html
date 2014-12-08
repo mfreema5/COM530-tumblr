@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <title>Practically an impact</title>
@@ -10,10 +11,13 @@
     <main>
       <fieldset>
         <legend>
-          <h1>Practically an impact</h1>
+          <h1>
+            Practically an impact
+          </h1>
         </legend>
       </fieldset>
-      <!-- {block:Posts}{block:Text} -->
+      <!-- {block:Posts}
+      {block:Text} -->
       <article class="text">
         <div class="label">
           <div class="h2back"></div>
@@ -31,27 +35,6 @@
           {Body}
         </section>
       </article>
-      <!-- {/block:Text}
-      {block:Photo} -->
-      <article class="text">
-        <div class="label">
-          <div class="h2back"></div>
-          <h2>
-            Posted
-          </h2>
-        </div>
-        <section>
-          <div class="bar"></div>
-          {block:Title}
-          <h3>
-            {Title}
-          </h3>
-          {/block:Title}
-          {Body}
-        </section>
-      </article>
-      <!-- {/block:Text}
-      {block:Photo} -->
       <article class="text">
         <div class="label">
           <div class="h2back"></div>
@@ -80,6 +63,19 @@
         </div>
         <section>
           <div class="bar"></div>
+          <a href="{LinkURL}">
+            <div class="under34">
+              <img alt="{PhotoWidth-250}x{PhotoWidth-250} {PhotoAlt}" src="{PhotoURL-250}">
+            </div>
+            <div class="over34">
+              <img alt="{PhotoWidth-400}x{PhotoWidth-400} {PhotoAlt}" src="{PhotoURL-400}">
+            </div>
+          </a>
+          {block:Caption}
+          <div class="describe">
+            {Caption}
+          </div>
+          {/block:Caption}
         </section>
       </article>
       <!-- {/block:Photo}
@@ -88,7 +84,7 @@
         <div class="label">
           <div class="h2back"></div>
           <h2>
-            Quotes
+            I quote&#133;
           </h2>
         </div>
         <section>
@@ -97,8 +93,8 @@
             {Quote}
           </blockquote>
           {block:Source}
-          <div class="source">
-            {SourceFirst}
+          <div class="describe">
+            {Source}
           </div>
           {/block:Source}
         </section>
@@ -107,7 +103,7 @@
         <div class="label">
           <div class="h2back"></div>
           <h2>
-            Quotes
+            I quote&#133;
           </h2>
         </div>
         <section>
@@ -116,8 +112,8 @@
             {Quote}
           </blockquote>
           {block:Source}
-          <div class="source">
-            {SourceLast}
+          <div class="describe">
+            {Source}
           </div>
           {/block:Source}
         </section>
@@ -128,28 +124,39 @@
         <div class="label">
           <div class="h2back"></div>
           <h2>
-            Linked
+            Check it:
           </h2>
         </div>
         <section>
           <div class="bar"></div>
           <div class="link">
-            <a href="{URL}">{Name}</a>
+            <h3>
+              <a href="{URL}">
+                {Name}
+              </a>
+            </h3>
             {block:Thumbnail}
-            <a href="{URL}">{Thumbnail}</a>
-          </div>
-          {block:Host}
-          <div class="caption">
-            via {Host}{/block:Host}
-          </div>
-          {/block:Thumbnail}
-          {block:Description}
-          <div class="describe">
-            {Description}{/block:Description}
+            <a href="{URL}">
+              <img alt="Thumbnail graphic for link." src="{Thumbnail}">
+            </a>
+            {/block:Thumbnail}
+            {block:Host}
+            <div class="caption">
+              <p>
+                via <b>{Host}</b>
+              </p>
+            </div>
+            {/block:Host}
+            {block:Description}
+            <div class="describe">
+              {Description}
+            </div>
+            {/block:Description}
           </div>
         </section>
       </article>
-      <!-- {/block:Link}{/block:Posts} -->
+      <!-- {/block:Link}
+      {/block:Posts} -->
     </main>
     <nav></nav>
     <footer></footer>

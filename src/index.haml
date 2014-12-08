@@ -1,3 +1,4 @@
+!!!
 %html{:lang => "en"}
   %head
     %title Practically an impact
@@ -9,8 +10,10 @@
     %main
       %fieldset
         %legend
-          %h1 Practically an impact
-      <!-- {block:Posts}{block:Text} -->
+          %h1
+            Practically an impact
+      <!-- {block:Posts}
+      {block:Text} -->
       %article.text
         .label
           .h2back
@@ -23,22 +26,6 @@
             {Title}
           {/block:Title}
           {Body}
-      <!-- {/block:Text}
-      {block:Photo} -->
-      %article.text
-        .label
-          .h2back
-          %h2
-            Posted
-        %section
-          .bar
-          {block:Title}
-          %h3
-            {Title}
-          {/block:Title}
-          {Body}
-      <!-- {/block:Text}
-      {block:Photo} -->
       %article.text
         .label
           .h2back
@@ -60,33 +47,42 @@
             Framed
         %section
           .bar
+          %a{:href => "{LinkURL}"}
+            .under34
+              %img{:src => "{PhotoURL-250}", :alt => "{PhotoWidth-250}x{PhotoWidth-250} {PhotoAlt}"}
+            .over34
+              %img{:src => "{PhotoURL-400}", :alt => "{PhotoWidth-400}x{PhotoWidth-400} {PhotoAlt}"}
+          {block:Caption}
+          .describe
+            {Caption}
+          {/block:Caption}
       <!-- {/block:Photo}
       {block:Quote} -->
       %article.other-quote
         .label
           .h2back
           %h2
-            Quotes
+            I quote&#133;
         %section
           .bar
           %blockquote
             {Quote}
           {block:Source}
-          .source
-            {SourceFirst}
+          .describe
+            {Source}
           {/block:Source}
       %article.other-quote
         .label
           .h2back
           %h2
-            Quotes
+            I quote&#133;
         %section
           .bar
           %blockquote
             {Quote}
           {block:Source}
-          .source
-            {SourceLast}
+          .describe
+            {Source}
           {/block:Source}
       <!-- {/block:Quote}
       {block:Link} -->
@@ -94,21 +90,28 @@
         .label
           .h2back
           %h2
-            Linked
+            Check it:
         %section
           .bar
           .link
-            %a{href:"{URL}"} {Name}
+            %h3
+              %a{:href => "{URL}"}
+                {Name}
             {block:Thumbnail}
-            %a{href:"{URL}"} {Thumbnail}
-          {block:Host}
-          .caption
-            via {Host}{/block:Host}
-          {/block:Thumbnail}
-          {block:Description}
-          .describe
-            {Description}{/block:Description}
-      <!-- {/block:Link}{/block:Posts} -->
+            %a{:href => "{URL}"}
+              %img{:src => "{Thumbnail}", :alt => "Thumbnail graphic for link." }
+            {/block:Thumbnail}
+            {block:Host}
+            .caption
+              %p
+                via <b>{Host}</b>
+            {/block:Host}
+            {block:Description}
+            .describe
+              {Description}
+            {/block:Description}
+      <!-- {/block:Link}
+      {/block:Posts} -->
     %nav
     %footer
 
