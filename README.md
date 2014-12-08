@@ -6,3 +6,13 @@ The branch [`gh-pages`](https://github.com/mfreema5/COM530-tumblr/tree/gh-pages)
 There's also the [`localhost`](https://github.com/mfreema5/COM530-tumblr/tree/localhost) branch, which I try to keep in sync with `gh-pages`, except that I point the CSS to a local file, and hard-code in content.
 The point being that I can load the versions of files in branch `localhost` from a `localhost` and see something close enough to the tumblr version to work on it.
 
+A gitty little trick:
+
+```bash
+$git diff --name-only gh-pages localhost
+
+index.html
+src/index.haml
+```
+
+So `screen.less` and `screen.css` are the same, only `index.haml` and `index.html` are different.
