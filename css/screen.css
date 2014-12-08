@@ -73,9 +73,7 @@ em {
 /* Targets a [12.5 em < screen < 37.5 em] screen */
 body {
   background-color: #537969;
-  border-color: black;
-  border-style: solid;
-  border-width: 0;
+  border: solid #DADADA 0;
 }
 fieldset {
   margin: 0 0 0.875em -0.625em;
@@ -187,7 +185,7 @@ main a:hover {
 /* This uses ‘em’ instead of ‘%’ to enforce minimums for spacings */
 @media all and (min-width: 0) {
   body {
-    border-top: 0.875em;
+    border-top: solid #DADADA 1.375em;
     /* Space for tumblr nav. items */
   }
   main {
@@ -209,7 +207,7 @@ main a:hover {
 /* Print-em better estimates the number of characters on a line   */
 @media all and (min-width: 34.5em) {
   body {
-    border-top: 1.125em;
+    border-top: solid #DADADA 1.5em;
     /* Space for tumblr nav. items */
   }
   main {
