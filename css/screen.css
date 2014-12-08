@@ -237,7 +237,7 @@ main a:hover {
     padding: 0 0 0 0.75%;
   }
   .text {
-    max-width: 20em;
+    max-width: 27em;
   }
   .text + .text {
     clear: none;
