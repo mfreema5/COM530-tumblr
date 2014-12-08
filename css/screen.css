@@ -26,15 +26,14 @@ html {
 /*******************************/
 body {
   font-family: Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #f1f2f1;
 }
 legend {
   /* <h1> replaced by <legend> */
   font-family: Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #b19979;
-  background-color: #f5eadb;
   font-size: 1.375em;
   line-height: 1.500em;
+  color: #b19979;
+  background-color: #f5eadb;
   border-radius: 0.125em;
   padding: 0 0.250em;
 }
@@ -79,10 +78,19 @@ li {
 /* but through it, all things get done.” - me */
 /**/
 /*[ Default; no media query ]*********************/
-/* Targets a [12.5 em < screen < 37.5 em] screen */
+/* Targets a [12.5 em < screen < 34.5 em] screen */
 body {
+  min-width: 12.172em;
+  /* matches main */
   background-color: #537969;
-  border: solid #DADADA 0;
+  border-top: solid #DADADA 1.5em;
+}
+main {
+  padding: 0 1.3125% 0 1.3125%;
+}
+main {
+  min-width: 12.172em;
+  padding: 0 1.3125% 0 1.3125%;
 }
 fieldset {
   margin: 0 0 0.875em -0.625em;
@@ -115,7 +123,6 @@ article {
 }
 .label h2 {
   margin: -1.625em 0 0.375em 0;
-  /* margin: -1.375em 0 0.375em 0; */
 }
 .h2back {
   display: inline-block;
@@ -136,33 +143,31 @@ section {
   min-width: 8.3125em;
   background-color: #fcf3e8;
   color: #5b5b7c;
+  border-style: solid;
+  border-color: #537969;
   padding: 0.375em;
 }
 .text section {
   margin: 0 0 0 -0.375em;
-  border-style: solid;
-  border-color: #537969;
   border-width: 0 1.000em 0 0;
+}
+[class^=other] section {
+  margin: 0 -0.375em 0 0;
+  border-width: 0 0 0 1.000em;
 }
 .text section p {
   padding-bottom: 0.6875em;
 }
-[class^=other] section {
-  margin: 0 -0.375em 0 0;
+.bar {
   border-style: solid;
-  border-color: #537969;
-  border-width: 0 0 0 1.000em;
+  border-color: #5b5b7c #537969;
 }
 .text .bar {
   margin: -0.8125em -1.375em 0 -0.375em;
-  border-style: solid;
-  border-color: #5b5b7c #537969;
   border-width: 1.000em 1.000em 0 0;
 }
 [class^=other] .bar {
   margin: -0.8125em -0.375em 0 -1.375em;
-  border-style: solid;
-  border-color: #5b5b7c #537969;
   border-width: 1.000em 0 0 1.000em;
 }
 blockquote {
@@ -186,53 +191,47 @@ blockquote {
 .over34 {
   display: none;
 }
-main a {
+a {
   color: #537969;
+  text-decoration: underline;
 }
-main a:hover {
+a:hover {
   color: #748f84;
 }
-/*********************************************[ screen < 12.5 em ]*/
-/* This is a weirdly small size of viewport, _not_ the default!   */
-/* This uses ‘em’ instead of ‘%’ to enforce minimums for spacings */
-@media all and (min-width: 0) {
+/********************************************[ screen < 12.5 em ]*/
+/* Note the use of "max-width". This makes this query exclusive  */
+/* instead of stacking, and means that this is _not_ the default */
+/* styling.  Or, rather, that it only overrides the defaults for */
+/* the uncommon case of a very large ratio of px/em to           */
+/* px/screen-width. Most of the time this will just be ignored.  */
+/**/
+@media all and (max-width: 12.5em) {
   body {
-    min-width: 12.172em;
-    /* matches main */
     border-top: solid #DADADA 1.375em;
     /* Space for tumblr nav. items */
   }
   main {
-    min-width: 12.172em;
     padding: 0 0.164em;
-    /* 12.172 + 0.164 +0.164 = 12.5 */
+    /* 12.172 + 0.164 + 0.164 = 12.5 */
   }
 }
-/******************************************[ 12.5 em < screen < 34.0 em ]*/
-/* Switch from ‘em’ to ‘%’ to allow dynamic/responsive sizing of spaces. */
-@media all and (min-width: 12.5em) {
-  main {
-    padding: 0 1.3125% 0 1.3125%;
-  }
-}
+/*****************************[ 12.5 em < screen < 34.5 em ]*/
+/* This is a placeholder for "@media ( min-width: 12.5em )" */
+/* Since it's the default, all its stylings are above.      */
+/**/
+/**/
 /**********************************[ 34.5 em < screen < 60.0 em ]*/
 /* Limit width of <section>, to limit the length of lines of text */
 /* 30 display-em -> 45 print-em ; 20 display-em -> 30 print-em    */
 /* Print-em better estimates the number of characters on a line   */
 @media all and (min-width: 34.5em) {
-  body {
-    border-top: solid #DADADA 1.5em;
-    /* Space for tumblr nav. items */
-  }
   main {
     max-width: 94.125%;
     padding: 0 0 0 2.125%;
   }
   fieldset {
     margin: 0.375% 0 0.875em -0.75%;
-    border-style: solid;
     border-width: 1.375em 8em 0 0;
-    border-color: #b19979 #537969;
     padding: 0 0 0 0.75%;
   }
   .text {
@@ -283,13 +282,19 @@ main a:hover {
   .over34 {
     display: block;
   }
-  main a {
+  a {
     text-decoration: none;
   }
-  main a:hover {
+  a:hover {
     color: #537969;
     text-shadow: #748f84 0 0 28px;
-    /* glows a little */
+    /* give a little glow */
   }
 }
 /**********************************[ 60 em < screen ]*/
+@media all and (min-width: 60em) {
+  main {
+    max-width: 56.475em;
+    /* 94.125% of 60 */
+  }
+}
