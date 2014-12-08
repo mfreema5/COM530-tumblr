@@ -36,13 +36,13 @@ h1 {
   background-color: #f5eadb;
   font-size: 1.375em;
   line-height: 1.500em;
-  /* font + 0.125em */
   border-radius: 0.125em;
   padding: 0 0.250em;
 }
 h2 {
   font-size: 1.250em;
   line-height: 1.375em;
+  /* font + 0.125em */
 }
 h3 {
   font-size: 1.125em;
@@ -71,6 +71,9 @@ em {
 /**/
 /*[ Default; no media query ]*********************/
 /* Targets a [12.5 em < screen < 37.5 em] screen */
+body {
+  background-color: black;
+}
 fieldset {
   margin: 0 0 0.875em -0.625em;
   border-style: solid;
@@ -180,6 +183,10 @@ main a:hover {
 /* This is a weirdly small size of viewport, _not_ the default!   */
 /* This uses ‘em’ instead of ‘%’ to enforce minimums for spacings */
 @media all and (min-width: 0) {
+  body {
+    padding-top: 0.875em;
+    /* Space for tumblr nav. items */
+  }
   main {
     min-width: 12.172em;
     padding: 0 0.164em;
@@ -198,6 +205,10 @@ main a:hover {
 /* 30 display-em -> 45 print-em ; 20 display-em -> 30 print-em    */
 /* Print-em better estimates the number of characters on a line   */
 @media all and (min-width: 34.5em) {
+  body {
+    padding-top: 1.125em;
+    /* Space for tumblr nav. items */
+  }
   main {
     max-width: 94.125%;
     padding: 0 0 0 2.125%;
