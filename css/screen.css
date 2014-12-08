@@ -185,6 +185,8 @@ main a:hover {
 /* This uses ‘em’ instead of ‘%’ to enforce minimums for spacings */
 @media all and (min-width: 0) {
   body {
+    min-width: 12.172em;
+    /* matches main */
     border-top: solid #DADADA 1.375em;
     /* Space for tumblr nav. items */
   }
@@ -240,7 +242,7 @@ main a:hover {
     margin-right: -3.625em;
   }
   [class^=other] {
-    max-width: 30em;
+    max-width: 27em;
   }
   [class^=other] + [class^=other] {
     clear: none;
