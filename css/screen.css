@@ -47,6 +47,7 @@ h2 {
 h3 {
   font-size: 1.125em;
   line-height: 1.250em;
+  padding-bottom: 0.8125em;
 }
 h1,
 h2,
@@ -62,6 +63,13 @@ strong {
 i,
 em {
   font-style: italic;
+}
+ul {
+  list-style: square outside none;
+}
+li {
+  margin-left: 0.5625em;
+  line-height: 1.325;
 }
 /* Layout *************************************/
 /* “CSS doesn't define where to place things; */
@@ -134,6 +142,9 @@ section {
   border-style: solid;
   border-color: #537969;
   border-width: 0 1.000em 0 0;
+}
+.text section p {
+  padding-bottom: 0.6875em;
 }
 [class^=other] section {
   margin: 0 -0.375em 0 0;
