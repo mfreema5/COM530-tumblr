@@ -28,9 +28,8 @@ body {
   font-family: Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #f1f2f1;
 }
-h1 {
-  /* Wrapping <h1> in <legend> gives values */
-  /* from “reset.css” precedence over <body> */
+legend {
+  /* <h1> replaced by <legend> */
   font-family: Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #b19979;
   background-color: #f5eadb;
