@@ -28,9 +28,8 @@ body {
   font-family: Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #f1f2f1;
 }
-h1 {
-  /* Wrapping <h1> in <legend> gives values */
-  /* from “reset.css” precedence over <body> */
+legend {
+  /* <h1> replaced by <legend> */
   font-family: Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #b19979;
   background-color: #f5eadb;
@@ -47,6 +46,7 @@ h2 {
 h3 {
   font-size: 1.125em;
   line-height: 1.250em;
+  padding-bottom: 0.8125em;
 }
 h1,
 h2,
@@ -62,6 +62,15 @@ strong {
 i,
 em {
   font-style: italic;
+}
+ul {
+  list-style: square inside none;
+  margin-bottom: 0.3825em;
+}
+li {
+  margin-left: 0.5625em;
+  line-height: 1.325;
+  list-style: inherit;
 }
 /* Layout *************************************/
 /* “CSS doesn't define where to place things; */
@@ -134,6 +143,9 @@ section {
   border-style: solid;
   border-color: #537969;
   border-width: 0 1.000em 0 0;
+}
+.text section p {
+  padding-bottom: 0.6875em;
 }
 [class^=other] section {
   margin: 0 -0.375em 0 0;
@@ -224,7 +236,7 @@ main a:hover {
     padding: 0 0 0 0.75%;
   }
   .text {
-    max-width: 20em;
+    max-width: 27em;
   }
   .text + .text {
     clear: none;
@@ -242,7 +254,7 @@ main a:hover {
     margin-right: -3.625em;
   }
   [class^=other] {
-    max-width: 27em;
+    max-width: 28.25em;
   }
   [class^=other] + [class^=other] {
     clear: none;

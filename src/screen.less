@@ -30,32 +30,42 @@ body {
   color: @greenly-1;
 }
 
-h1 {
-  /* Wrapping <h1> in <legend> gives values */
-  /* from “reset.css” precedence over <body> */
+legend {
+  /* <h1> replaced by <legend> */
   font-family: @default-font-stack;
   color: @sandy-6;
   background-color: @sandy-4;
   font-size:     1.375em;
-  line-height:   1.500em;  /* font + 0.125em */
+  line-height:   1.500em;
   border-radius: 0.125em;
   padding: 0 0.250em;
 }
 
 h2 {
   font-size:     1.250em;
-  line-height:   1.375em;
+  line-height:   1.375em;  /* font + 0.125em */
 }
 
 h3 {
-  font-size:     1.125em;
-  line-height:   1.250em;
+  font-size:      1.125em;
+  line-height:    1.250em;
+  padding-bottom: 0.8125em;
 }
 
 h1,h2,h3,h4,h5,h6,legend,b,strong { font-weight: bold; }
 
 i,em { font-style: italic; }
 
+ul {
+  list-style: square inside none;
+  margin-bottom: 0.3825em;
+}
+
+li {
+  margin-left: 0.5625em;
+  line-height: 1.325;
+  list-style: inherit;
+}
 
 /* Layout *************************************/
 /* “CSS doesn't define where to place things; */
@@ -67,13 +77,19 @@ i,em { font-style: italic; }
 /*[ Default; no media query ]*********************/
 /* Targets a [12.5 em < screen < 37.5 em] screen */
 
+body {
+  background-color: @greenly-5;
+  border: solid #DADADA 0;
+}
+
+
 fieldset {
   margin: 0 0 0.875em -0.625em;
   border-style: solid;
   border-width: 1.375em 1.375em 0 0;
   border-color: @sandy-6 @greenly-5;
   padding: 0 0 0 0.625em;
-  }
+}
 
 article {
   clear: both;
@@ -135,6 +151,10 @@ section {
   border-style: solid;
   border-color: @greenly-5;
   border-width: 0 1.000em 0 0;
+}
+
+.text section p {
+  padding-bottom: 0.6875em;
 }
 
 [class^=other] section {
@@ -201,6 +221,13 @@ main a:hover {
 
 @media all and ( min-width: 0 ) {
 
+  body {
+    min-width: 12.172em;
+    /* matches main */
+    border-top: solid #DADADA 1.375em;
+    /* Space for tumblr nav. items */
+  }
+
   main {
     min-width: 12.172em;
     padding: 0 0.164em;
@@ -227,6 +254,11 @@ main a:hover {
 
 @media all and ( min-width: 34.5em ) {
 
+  body {
+    border-top: solid #DADADA 1.5em;
+    /* Space for tumblr nav. items */
+  }
+
   main {
     max-width: 94.125%;
     padding: 0 0 0 2.125%;
@@ -241,7 +273,7 @@ main a:hover {
     }
 
   .text {
-    max-width: 20em;
+    max-width: 27em;
   }
 
   .text + .text {
@@ -257,16 +289,13 @@ main a:hover {
     display: none;
   }
 
-  .text + .text section {
-  }
-
   .text + .text .bar {
     margin-left: -1.500em;
     margin-right: -3.625em;
   }
 
   [class^=other] {
-    max-width: 30em;
+    max-width: 28.25em;
   }
 
   [class^=other] + [class^=other] {
